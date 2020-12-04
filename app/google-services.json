@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "117604104863",
+    "firebase_url": "https://parcial-ii-483d0.firebaseio.com",
+    "project_id": "parcial-ii-483d0",
+    "storage_bucket": "parcial-ii-483d0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:117604104863:android:b08c37df29da9126cb40aa",
+        "android_client_info": {
+          "package_name": "com.example.parcialiipuntajes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "117604104863-j61nhb6oi3ee2u7q6s9riperknndj21l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwLOSoRfSdPerDM_pL6PIl50QZhnVE5NY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "117604104863-j61nhb6oi3ee2u7q6s9riperknndj21l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
