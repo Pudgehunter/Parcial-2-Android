@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String guardarPregunta;
     private String promedio;
     private String listaPromedio;
+    private String magia;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +53,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             lecturaId.append(pregunta.getPregunta());
                             guardarPregunta = pregunta.getPregunta();
                             //Formula de promedio es Las sumas de los numeros/totalnumeros, ej: (n1 + n2)/ 2
-                            listaPromedio = pregunta.getPromedio() + ":" + pregunta.getPuntaje();
-                            //promedio = (Integer.parseInt(pregunta.getPuntaje()) + Integer.parseInt(puntajeId.getText().toString()));
+
+                            //Este lista de promedio mejor lo puse en el main para evitar web :v
+                            //El problema de esta lista, ya que son getter, se tiene que actualziar el firebase 2 veces para que entre el primer digito.
+                            listaPromedio = pregunta.getListaPromedio() + ":" + pregunta.getPuntaje();
+
+                            //String[] a = listaPromedio.split(":");
+                            //for(int i = 0; i < a.length; i++) {
+                                //int promedio = Integer.parseInt(a[i])/(a.length-1);
+                            //}
+
+                            //Despues de muchos intentos de prueba y error encontre otra carreta
+                            //listaPromedio = pregunta.getListaPromedio();
+                            //No funciono esta carreta
                         }
 
                         @Override
@@ -85,15 +97,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //Leer literalmente firebase para que porfin funcione esto porfavor
                 //Si funciono pero me toco ponerlo arriba.
 
+                //Prueba para que me salga instantaneo
+                magia = puntajeId.getText().toString();
+
                 //PreguntasPrueba
                 Pregunta preguntas = new Pregunta(
                         guardarPregunta,
                         puntajeId.getText().toString(),
-                        listaPromedio,
-                        promedio
+                        listaPromedio
                 );
 
                 reference.setValue(preguntas);
+
+                //Vaciar el input
+                puntajeId.setText("");
 
                 break;
         }
